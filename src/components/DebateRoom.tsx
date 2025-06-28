@@ -17,7 +17,7 @@ const DebateRoom = () => {
       id: 1,
       topic: "Should social media platforms be regulated by government?",
       participants: 24,
-      arguments: 47,
+      argumentCount: 47,
       sideA: { title: "Yes, Regulate", count: 12 },
       sideB: { title: "No, Keep Free", count: 12 },
       status: "active"
@@ -26,7 +26,7 @@ const DebateRoom = () => {
       id: 2,
       topic: "Is artificial intelligence a threat to job security?",
       participants: 18,
-      arguments: 33,
+      argumentCount: 33,
       sideA: { title: "Yes, Threatens Jobs", count: 9 },
       sideB: { title: "No, Creates Jobs", count: 9 },
       status: "active"
@@ -35,7 +35,7 @@ const DebateRoom = () => {
       id: 3,
       topic: "Should renewable energy be prioritized over economic growth?",
       participants: 31,
-      arguments: 62,
+      argumentCount: 62,
       sideA: { title: "Environment First", count: 16 },
       sideB: { title: "Economy First", count: 15 },
       status: "trending"
@@ -124,7 +124,7 @@ const DebateRoom = () => {
                     </div>
                     <div className="text-center text-gray-400">
                       <MessageSquare className="w-6 h-6 mx-auto mb-1" />
-                      <div className="text-sm">{debate.arguments} args</div>
+                      <div className="text-sm">{debate.argumentCount} args</div>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-red-600">{debate.sideB.count}</div>
@@ -182,7 +182,7 @@ const DebateRoom = () => {
             <CardHeader>
               <CardTitle className="text-2xl">{selectedDebate.topic}</CardTitle>
               <CardDescription className="flex items-center justify-between pt-2">
-                <span>{selectedDebate.participants} participants • {selectedDebate.arguments} arguments</span>
+                <span>{selectedDebate.participants} participants • {selectedDebate.argumentCount} arguments</span>
                 <div className="flex items-center space-x-2">
                   <Shield className="w-4 h-4 text-blue-500" />
                   <span className="text-sm">AI Moderated</span>
