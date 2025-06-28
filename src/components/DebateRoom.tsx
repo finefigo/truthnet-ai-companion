@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -42,7 +41,7 @@ const DebateRoom = () => {
     }
   ];
 
-  const arguments = [
+  const debateArguments = [
     {
       id: 1,
       side: 'A',
@@ -240,7 +239,7 @@ const DebateRoom = () => {
           {/* Arguments Feed */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold text-gray-800">Live Arguments</h3>
-            {arguments.map((arg) => (
+            {debateArguments.map((arg) => (
               <Card key={arg.id} className={`border-l-4 ${arg.side === 'A' ? 'border-l-green-500 bg-green-50/50' : 'border-l-red-500 bg-red-50/50'} backdrop-blur-sm`}>
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-4">
